@@ -24,13 +24,13 @@ correctly - as reference you can use one in `Applications/Makefile`
 Every program has been tested on AVR ATmega328p (basically Arduino) so
 incompatibilies with other processors are not covered for now.
 
-##### avrblink.c
+#### avrblink.c
 Basic hello world program for hardware. 
 - *Connections*:    
     - LED anode  ->  PB5  (Arduino: D13)
 
 
-##### basicclock.c, digitalclock.c 
+#### basicclock.c, digitalclock.c 
 Display clock data from Real-time clock on 16x2 LCD. 
 - *Dependencies*:  Uart, CharLCD
 - *Connections*:  
@@ -38,21 +38,21 @@ Display clock data from Real-time clock on 16x2 LCD.
     -  SDA (both)  ->   PC4   (Arduino: A4)
 
 
-##### DCF77.c
+#### DCF77.c
 Decode bits from DCF reciever input and displays then in binary form
 - *Dependecies*:   Uart
 - *Connections*:   
     -  Reciever    ->   PD2   (Arduino: D2)
 
 
-##### ledpattern.c
+#### ledpattern.c
 On button interrupt changes timing of LED on/off cycles 
-*Connections*:  
+- *Connections*:  
     - 4x LED anode ->  PB2, PB3, PB4, PB5  (Arduino: 10 - 13)
     - Button       ->  PD2                 (Arduino: D2)
 
 
-##### sndgenerator.c
+#### sndgenerator.c
 Depending on ADC input values changes frequency of PWM signal and reports
 frequency on 4x7-segment display. With button you can change sound wave (it is
 simulated by square wave, so a bit off)
@@ -63,7 +63,7 @@ simulated by square wave, so a bit off)
     - LED display segments             <-  PB0, PB1, PB2, PB3 (Arduino: 8 -11)
     - LED A-G                          <-  PORTD              (Arduno: 0 - 6)
 
-##### stopwatch.c
+#### stopwatch.c
 Stopwatch with reset and stop ability.
 - *Connections*:  
     - Run/Stop button                  ->  PD3      (Arduino: 3)
@@ -72,7 +72,7 @@ Stopwatch with reset and stop ability.
     - LED A - H                        <-  PD0, PD1, PD2, PD4, PD5, PD6, PD7 (0 - 8, not 3)
     - LED display decimal dot          <-  PB5      (Arduino: 13)
 
-##### voltmeter.c
+#### voltmeter.c
 On 16x2 LCD displays measured value from ADC
 - *Connections*:  
     - Analog source (up to 5V with std AREF)    ->  PC0  (ADC0)
